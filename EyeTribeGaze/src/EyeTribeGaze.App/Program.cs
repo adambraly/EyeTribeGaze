@@ -16,7 +16,10 @@ namespace EyeTribeGaze.App
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new OverlayForm());
+            using (var overlay = new OverlayForm())
+            {
+                Application.Run(overlay);
+            }
         }
     }
 }
